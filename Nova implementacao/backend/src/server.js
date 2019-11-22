@@ -1,11 +1,16 @@
 //facilita a criação de rotas (pesquisar pra explicar melhor)
 const express = require('express');
 const routes = require('./routes');
-const db = require('./db');
-
+const mongoose = require('mongoose');
 
 const app = express();
 
+mongoose.connect('mongodb+srv://smartcampus:smartcampus@researchroom-vdqcn.mongodb.net/researchroom?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+
+console.log(`db connected`)
 
 // req.query = acessar query params (para filtros)
 // req.params = acessar route params (para edição (put) e delete)

@@ -4,7 +4,7 @@ const ComputerSchema = new mongoose.Schema({
     idPc: Number,
     disponivel: Boolean,
     montado: Boolean
-}, {collection: 'Computer'});
+});
 
 //Digo para o mongo que ao criar um Computer, ele deve utilizar o ComputerSchema
 module.exports = mongoose.model('Computer', ComputerSchema);
