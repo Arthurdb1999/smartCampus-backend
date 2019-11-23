@@ -14,10 +14,10 @@ module.exports = {
 
     async update(req, res){
 
-        const computers = await Computer.updateOne(req.query, {
+        const computer = await Computer.updateOne(req.query, {
             $set: {disponivel: req.body.disponivel, montado: req.body.montado}
         });
         console.log("updated")
-        return res.json(computers);
+        return res.json(computer);
     }
 }    // update the bear with this id (accessed at PUT http://localhost:8080/api/bears/:bear_id)
