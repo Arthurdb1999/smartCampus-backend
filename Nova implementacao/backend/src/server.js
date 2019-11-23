@@ -2,15 +2,16 @@
 const express = require('express');
 const routes = require('./routes');
 const mongoose = require('mongoose');
+const package = require('../../backend/package.json');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://smartcampus:smartcampus@researchroom-vdqcn.mongodb.net/researchroom?retryWrites=true&w=majority', {
+mongoose.connect(package.dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-})
+});
 
-console.log(`db connected`)
+console.log(`db connected`);
 
 // req.query = acessar query params (para filtros)
 // req.params = acessar route params (para edição (put) e delete)

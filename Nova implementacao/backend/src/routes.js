@@ -11,17 +11,9 @@ const routes = express.Router();
 // req é oq o usuario manda e res é a resposta do backend (vai retornar em formato json
 
 routes.get('/computers', ComputerController.index);
-routes.put('./computers', ComputerController.update);
+routes.post('/computers', ComputerController.update);
 
 //routes.post('/intial', )
 
 //Exporta as rotas
 module.exports = routes;
-
-
-
-
-
-
-
-//TODO FAZER O SERVIDOR RODAR LOCALMENTE

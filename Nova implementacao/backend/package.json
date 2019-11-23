@@ -1,7 +1,8 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "db_url": "a",
+  "dbUrl": "mongodb+srv://smartcampus:smartcampus@researchroom-vdqcn.mongodb.net/researchroom?retryWrites=true&w=majority",
+  "dbUrla": "mongodb://@localhost:27017",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
