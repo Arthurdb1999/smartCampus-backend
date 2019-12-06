@@ -14,9 +14,12 @@ export default function Computers() {
         handleResearchRoom();
     }, []);
 
-    async function handleReserve(id) {
-        // const response = await api.post('/computers', id);
-        // setComputers(response.data);
+    async function handleReserve(computer) {
+        computer.disponivel = !computer.disponivel
+        const response = await api.post('/computers', {
+            computer: computer
+        });
+        setComputers(response.data);
     }
 
     //ver 1h e 27min do video, para trocar a cor do disponivel e indisponivel
@@ -50,11 +53,11 @@ export default function Computers() {
                             : //else
                             computer.disponivel
                                 ? //then
-                                <button onClick={handleReserve(computer._id)}>
+                                <button onClick={() => handleReserve(computer)}>
                                     Ocupar
                                         </button>
                                 : //else
-                                <button onClick={handleReserve(computer._id)}>
+                                <button onClick={() => handleReserve(computer)}>
                                     Desocupar
                                         </button>
                         }
