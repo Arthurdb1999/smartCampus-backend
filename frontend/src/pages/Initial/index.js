@@ -1,18 +1,19 @@
 import React from 'react';
+import './index.css';
 
 export default function Initial({ history }) {
     return (
-        <>
-            <p>Escolha qual Web Service você deseja testar</p>
-            <button onClick={() => history.push('/computers')}>
+        <ul className = 'conteiner'>
+            <h1>Escolha qual Web Service você deseja testar</h1>
+            <button className="btn1" onClick={() => history.push('/computers')}>
                 Disponibilidade dos computadores da Sala de Pesquisa
           </button>
-            <button>
+            <button className="btn2">
                 Web Service 2
           </button>
-            <button>
+            <button className="btn3">
                 Web Service 3
           </button>
-        </>
+        </ul>
     );
 }

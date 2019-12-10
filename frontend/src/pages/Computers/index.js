@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
+import './styles.css';
 
 export default function Computers() {
 
@@ -21,13 +22,9 @@ export default function Computers() {
         });
         setComputers(response.data);
     }
-
-    //ver 1h e 27min do video, para trocar a cor do disponivel e indisponivel
-
-
+   
     return (
         <>
-            <button></button>
             <ul className="computers-list">
                 {computers.map(computer => (
                     <li key={computer._id}>
@@ -49,15 +46,15 @@ export default function Computers() {
                         </span>
                         {computer.disponivel === false && computer.montado === false
                             ? //then
-                            <button disabled>Ocupar</button>
+                            <button className="btnComputerIndisponível" disabled>Ocupar</button>
                             : //else
                             computer.disponivel
                                 ? //then
-                                <button onClick={() => handleReserve(computer)}>
+                                <button className="btnComputerDesocupado" onClick={() => handleReserve(computer)}>
                                     Ocupar
                                         </button>
                                 : //else
-                                <button onClick={() => handleReserve(computer)}>
+                                <button className="btnComputerOcupado" onClick={() => handleReserve(computer)}>
                                     Desocupar
                                         </button>
                         }
