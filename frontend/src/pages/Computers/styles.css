@@ -1,14 +1,7 @@
-ul.spot-list{
-    width: 100%;
-    list-style: none;
-    displa: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
 .content button.btnComputerOcupado{
-    border: 0;
+    border: 1px solid black;
     border-radius: 2px;
-    width: 100px;
+    width: fit-content;
     height: 18px;
     padding: 0 20px;
     font-size: 14px;
@@ -18,30 +11,42 @@ ul.spot-list{
   }
 
   .content button.btnComputerDesocupado{
-    border: 0;
+    border: 1px solid black;
     border-radius: 2px;
-    width: 100px;
+    width: fit-content;
     height: 18px;
     padding: 0 20px;
     font-size: 14px;
     background: #5ff05a;
     color: #000000;
     cursor: pointer;
-    
   }
 
   .content button.btnComputerIndisponível{
-    border: 0;
+    border: 1px solid black;
     border-radius: 2px;
-    width: 100px;
+    width: fit-content;
     height: 18px;
     padding: 0 20px;
     font-size: 14px;
-    background: #444444;
-    color: #000000;
-    cursor: pointer;
+    background: #44444433;
+    color: #000000bb;
+    cursor: inherit;
   }
 
-h2{
-    text-align: center;
+ul.computers-list{
+  position: absolute;
+  left: 20px;
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.computers-list li{
+  margin-left: 20px;
+}
+
+ul.computers-list li span{
+  margin-right: ;
 }

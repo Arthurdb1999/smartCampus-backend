@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import './styles.css';
+import computador from '../../assets/computador-3.gif'
 
 export default function Computers() {
 
@@ -29,22 +30,23 @@ export default function Computers() {
             <ul className="computers-list">
                 {computers.map(computer => (
                     <li key={computer._id}>
-                        <header>
-                            {/*pegar uma imagenzinha de um PC na net */}
-                        </header>
-                        <strong>{computer.idPc}</strong>
+                            <header>
+                                <img src = {computador} alt = "computador"/>
+                            </header>
                         <span>
+                        <strong>{computer.idPc} - </strong>
                             {computer.disponivel === false && computer.montado === false
                                 ? //then
-                                'indisponivel'
+                                'Indisponível'
                                 : //else
                                 computer.disponivel
                                     ? //then
-                                    'disponivel'
+                                    'Disponível'
                                     : //else
-                                    'ocupado'
+                                    'Ocupado'
                             }
                         </span>
+                        <br></br>
                         {computer.disponivel === false && computer.montado === false
                             ? //then
                             <button className="btnComputerIndisponível" disabled>Ocupar</button>
