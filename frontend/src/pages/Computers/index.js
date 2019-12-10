@@ -16,10 +16,11 @@ export default function Computers() {
     }, []);
 
     async function handleReserve(computer) {
-        computer.disponivel = !computer.disponivel
-        const response = await api.post('/computers', {
+        computer.disponivel = !computer.disponivel;
+        await api.post('/computers', {
             computer: computer
         });
+        const response = await api.get('/computers');
         setComputers(response.data);
     }
    
