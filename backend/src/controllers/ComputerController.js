@@ -20,4 +20,4 @@ module.exports = {
         console.log("updated idPc: ", req.body.computer.idPc)
         return res.json(rescomputer);
     }
-}    // update the bear with this id (accessed at PUT http://localhost:8080/api/bears/:bear_id)
+} 

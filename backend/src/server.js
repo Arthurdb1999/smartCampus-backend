@@ -1,13 +1,15 @@
 //facilita a criação de rotas (pesquisar pra explicar melhor)
+require("dotenv").config();
+
 const express = require('express');
 const routes = require('./routes');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const package = require('../../backend/package.json');
+
 
 const app = express();
 
-mongoose.connect(package.dbUrl, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
