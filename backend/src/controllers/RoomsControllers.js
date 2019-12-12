@@ -7,7 +7,7 @@ module.exports = {
     async index(req, res) {
 
         const rooms = await Computer.find(req.query).sort({ idPc: 1 });
-        console.log("retrieved");
+        console.log("retrieved aaa");
         return res.json(rooms);   
     }
 } 
