@@ -1,5 +1,6 @@
 const express = require('express');
 const ComputerController = require('./controllers/ComputerController');
+//const RoomsController = require('./controllers/RoomsController');
 
 //const initial = require
 
@@ -12,6 +13,7 @@ const routes = express.Router();
 
 routes.get('/computers', ComputerController.index);
 routes.post('/computers', ComputerController.update);
+routes.post('/rooms');
 
 //routes.post('/intial', )
 
