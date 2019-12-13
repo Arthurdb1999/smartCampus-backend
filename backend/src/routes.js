@@ -13,7 +13,8 @@ const routes = express.Router();
 
 routes.get('/computers', ComputerController.index);
 routes.post('/computers', ComputerController.update);
-routes.post('/rooms');
+routes.post('/getCourses');
+routes.get('/chaves');
 
 //routes.post('/intial', )
 
