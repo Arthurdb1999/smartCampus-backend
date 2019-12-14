@@ -8,7 +8,7 @@ Consultar link para mais detalhes sobre o frontend:
 Link Heroku app frontend: https://researchroom.herokuapp.com
 
 ## Observações
-Foi utilizada variáveis de ambientes que são setadas diretamente no Heroku
+Foram utilizadas variáveis de ambientes que são setadas diretamente no Heroku
 
 ## Endpoints
 ***GET*** Lista todos os computadores - **/computers**
