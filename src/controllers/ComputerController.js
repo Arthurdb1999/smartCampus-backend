@@ -18,6 +18,12 @@ module.exports = {
             $set: {disponivel: req.body.computer.disponivel}
         });
         console.log("updated idPc: ", req.body.computer.idPc)
+
+        //await rescomputer.populate('')
+
+        req.io.emit('change_computer', rescomputer);
+
         return res.json(rescomputer);
+
     }
 } 
