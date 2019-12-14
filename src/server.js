@@ -6,10 +6,15 @@ const routes = require('./routes');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+const socketio = require('socket.io');
+const http = require('http');
+
 
 const app = express();
+const server = http.Server(app);
 
-mongoose.connect(process.env.MONGO_URL, {
+//mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect("mongodb+srv://smartcampus:smartcampus@researchroom-vdqcn.mongodb.net/researchroom?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
