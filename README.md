@@ -5,6 +5,7 @@ Backend do projeto SmartCampus no IFSC - Campus Lages. API de reserva de computa
 Consultar link para mais detalhes sobre o frontend:
 
 ### https://github.com/Arthurdb1999/smartCampus-frontend
+Link Heroku app frontend: https://researchroom.herokuapp.com
 
 ## Observações
 Foi utilizada variáveis de ambientes que são setadas diretamente no Heroku
