@@ -14,14 +14,21 @@ module.exports = {
 
     async update(req, res){
 
-        const rescomputer = await Computer.updateOne({idPc: req.body.computer.idPc}, {
-            $set: {disponivel: req.body.computer.disponivel}
+        const { idPc } = req.body.computer;
+        const { disponivel } = req.body.computer;
+
+        const rescomputer = await Computer.updateOne({idPc: idPc}, {
+            $set: {disponivel: disponivel}
         });
-        console.log("updated idPc: ", req.body.computer.idPc)
+        
+        console.log("updated idPc: ", idPc)
 
-        //await rescomputer.populate('')
+        const computersocket = {
+            idPc: idPc,
+            disponivel: disponivel,
+        }
 
-        req.io.emit('change_computer', rescomputer);
+        req.io.emit('change_computer', computersocket);
 
         return res.json(rescomputer);
 
