@@ -9,6 +9,7 @@ const cors = require('cors');
 
 const app = express();
 
+//mongoose.connect("mongodb+srv://smartcampus:smartcampus@researchroom-vdqcn.mongodb.net/researchroom?retryWrites=true&w=majority", {
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
